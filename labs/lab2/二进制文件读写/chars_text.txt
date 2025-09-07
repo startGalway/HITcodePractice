@@ -1,1 +1,0 @@
-This is a sample character array. It contains 100 characters to demonstrate the difference between bÿ
