@@ -16,7 +16,7 @@ int txt2bin(const char *txtfile, const char *binfile) {
         fclose(fin);
         return -2;
     }
-    struct myrecord rec;
+    struct myrecord rec;  //这里rec是一个中间变量
     int cnt = 0;
     while (fscanf(fin, "%lu %31s %f %f %f %d",
                   &rec.id, rec.name, &rec.score[0], &rec.score[1], &rec.score[2], &rec.weight) == 6) {
@@ -28,7 +28,7 @@ int txt2bin(const char *txtfile, const char *binfile) {
             return -3;
         }
         cnt++;
-    }
+    }  //如果某行读取个数不是6，就结束循环
     fclose(fin);
     fclose(fout);
     printf("Total records written: %d\n", cnt);

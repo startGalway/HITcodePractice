@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 struct myrecord {
-    unsigned long id;
-    char name[32];
-    float score[3];
-    int weight;
+    unsigned long id;  // 
+    char name[32];  //32
+    float score[3];  //12
+    int weight;  //4
 };
 
 // 功能1：从文本文件读取数据，输出到屏幕，并写入二进制文件
