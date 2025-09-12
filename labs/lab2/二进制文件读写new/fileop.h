@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 struct myrecord {
-    unsigned long id;  // 
+    unsigned long id;  // 8
     char name[32];  //32
     float score[3];  //12
     int weight;  //4
