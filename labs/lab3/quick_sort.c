@@ -25,5 +25,6 @@ void quick_sort_helper(void *base, size_t low, size_t high, size_t size, Compare
 }
 
 void quick_sort(void *base, size_t nmemb, size_t size, CompareFunc cmp) {
+    if (nmemb < 2) return;
     quick_sort_helper(base, 0, nmemb - 1, size, cmp);
 }

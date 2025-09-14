@@ -36,7 +36,9 @@ void merge_sort_helper(void *a, void *b, size_t l, size_t r, size_t size, Compar
 }
 
 void merge_sort(void *base, size_t nmemb, size_t size, CompareFunc cmp) {
+    if (nmemb < 2) return;
     void *temp = malloc(nmemb * size);
+    if (!temp) return;
     merge_sort_helper(base, temp, 0, nmemb - 1, size, cmp);
     free(temp);
 }

@@ -1,6 +1,7 @@
 #include "sort.h"
 
 void selection_sort(void *base, size_t nmemb, size_t size, CompareFunc cmp) {
+    if (nmemb < 2) return;
     char *arr = base;
     for (size_t i = 0; i < nmemb - 1; i++) {
         size_t min_idx = i;
